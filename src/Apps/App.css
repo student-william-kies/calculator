@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #282c34;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.center-calc{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.calculator{
+    width: 20%;
+    height: 50vh;
+    text-align: center;
+    color: white;
+    background-color: #1a1a1a;
+    border: 2px solid #ff9c3c;
+}
+
+.top-screen{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 64px;
+    text-align: right;
+    height: 10vh;
+}
+
+.list-number{
+    display: flex;
+    justify-content: left;
+}
+
+.list-number table{
+    width: 15vw;
+    height: 39.58vh;
+}
+
+.list-number button{
+    font-size: 50px;
+    width: 60px;
+    background: none;
+    color: white;
+}
