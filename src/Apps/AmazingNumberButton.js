@@ -1,31 +1,36 @@
+// function test(props)
+// {
+//     console.log(props.target.value)
+// }
+
 function ListNumbers(props) {
-    return <td><button type='button'>{props.value}</button></td>
+    return <td><button type='button' id={'number-'+props.value} value={props.value}>{props.value}</button></td> /* onClick={test} */
 }
 
 function AmazingNumberButton(props)
 {
-    const numbers1 = props.numbers1;
-    const numbers2 = props.numbers2;
-    const numbers3 = props.numbers3;
+    const numbersTop = props.numbersTop;
+    const numbersMiddle = props.numbersMiddle;
+    const numbersBottom = props.numbersBottom;
 
-    const list1 = numbers1.map((numbers) =>
-        <ListNumbers key={numbers.toString()} value={numbers} />
+    const topNumbers = numbersTop.map((numbersTop) =>
+        <ListNumbers key={numbersTop.toString()} value={numbersTop} />
     )
 
-    const list2 = numbers2.map((numbers) =>
-        <ListNumbers key={numbers.toString()} value={numbers} />
+    const middleNumbers = numbersMiddle.map((numbersMiddle) =>
+        <ListNumbers key={numbersMiddle.toString()} value={numbersMiddle} />
     )
 
-    const list3 = numbers3.map((numbers) =>
-        <ListNumbers key={numbers.toString()} value={numbers} />
+    const bottomNumbers = numbersBottom.map((numbersBottom) =>
+        <ListNumbers key={numbersBottom.toString()} value={numbersBottom} />
     )
 
     return (
       <table>
           <tbody>
-            <tr>{list1}</tr>
-            <tr>{list2}</tr>
-            <tr>{list3}</tr>
+            <tr>{topNumbers}</tr>
+            <tr>{middleNumbers}</tr>
+            <tr>{bottomNumbers}</tr>
           </tbody>
       </table>
     );

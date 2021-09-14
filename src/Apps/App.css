@@ -21,7 +21,7 @@ h1{
 
 .calculator{
     width: 20%;
-    height: 50vh;
+    height: 60vh;
     text-align: center;
     color: white;
     background-color: #1a1a1a;
@@ -36,19 +36,35 @@ h1{
     height: 10vh;
 }
 
-.list-number{
+.container{
     display: flex;
-    justify-content: left;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.numbers, .operators{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .list-number table{
     width: 15vw;
-    height: 39.58vh;
+    height: 40vh;
 }
 
-.list-number button{
+.list-number button, .list-operator button, .equal button{
     font-size: 50px;
     width: 60px;
     background: none;
     color: white;
+}
+
+.list-operator tr{
+    display: flex;
+    flex-direction: column;
+}
+
+#button-equal{
+    width: 11.4vw;
 }
