@@ -8,10 +8,10 @@ import {useState} from "react";
 function Calculator()
 {
     const [result, setResult] = useState(0);
-    const lastNumber = 0;
     const numbersTop = [7, 8, 9];
     const numbersMiddle = [4, 5, 6];
     const numbersBottom = [1, 2, 3];
+    const lastNumber = 0;
     const operator = ['+', '-', '*', '/'];
     const equal = '=';
 
@@ -34,7 +34,7 @@ function Calculator()
                     </div>
                 </div>
                 <div className='equal'>
-                    <div className='last-button'><MagnificientEqualButton equal={equal} lastNumber={lastNumber} /></div>
+                    <div className='last-button'><MagnificientEqualButton click={Click} equal={equal} lastNumber={lastNumber} /></div>
                 </div>
             </div>
         </div>
