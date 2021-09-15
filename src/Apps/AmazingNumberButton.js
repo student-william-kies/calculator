@@ -1,10 +1,6 @@
-// function test(props)
-// {
-//     console.log(props.target.value)
-// }
-
-function ListNumbers(props) {
-    return <td><button type='button' id={'number-'+props.value} value={props.value}>{props.value}</button></td> /* onClick={test} */
+function ListNumbers(props)
+{
+    return <td><button type='button' onClick={props.click} id={'number-'+props.value} value={props.value}>{props.value}</button></td>
 }
 
 function AmazingNumberButton(props)
@@ -14,15 +10,15 @@ function AmazingNumberButton(props)
     const numbersBottom = props.numbersBottom;
 
     const topNumbers = numbersTop.map((numbersTop) =>
-        <ListNumbers key={numbersTop.toString()} value={numbersTop} />
+        <ListNumbers click={props.click} key={numbersTop.toString()} value={numbersTop} />
     )
 
     const middleNumbers = numbersMiddle.map((numbersMiddle) =>
-        <ListNumbers key={numbersMiddle.toString()} value={numbersMiddle} />
+        <ListNumbers click={props.click} key={numbersMiddle.toString()} value={numbersMiddle} />
     )
 
     const bottomNumbers = numbersBottom.map((numbersBottom) =>
-        <ListNumbers key={numbersBottom.toString()} value={numbersBottom} />
+        <ListNumbers click={props.click} key={numbersBottom.toString()} value={numbersBottom} />
     )
 
     return (
