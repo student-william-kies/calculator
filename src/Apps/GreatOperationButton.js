@@ -1,5 +1,5 @@
 function ListOperator(props) {
-    return <td><button onClick={props.selectOperator} value={props.value} type='button'>{props.value}</button></td>
+    return <td><button onClick={props.selectOperator} value={props.value} type='button' id='button-operator'>{props.value}</button></td>
 }
 
 function GreatOperationButton(props)
