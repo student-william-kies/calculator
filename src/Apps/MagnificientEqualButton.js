@@ -3,7 +3,7 @@ function MagnificientEqualButton(props)
     return (
         <table>
             <tbody>
-            <tr><td><button type='button' id='button-equal'>{props.equal}</button></td><td><button onClick={props.click} type='button' id={'number-'+props.lastNumber} value={props.lastNumber}>{props.lastNumber}</button></td></tr>
+            <tr><td><button onClick={props.click} type='button' id={'number-'+props.lastNumber} value={props.lastNumber}>{props.lastNumber}</button></td><td><button type='button'>{props.equal}</button></td></tr>
             </tbody>
         </table>
     );

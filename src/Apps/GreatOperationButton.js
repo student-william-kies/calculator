@@ -1,13 +1,13 @@
 function ListOperator(props) {
-    return <td><button type='button'>{props.value}</button></td>
+    return <td><button onClick={props.selectOperator} value={props.value} type='button'>{props.value}</button></td>
 }
 
 function GreatOperationButton(props)
 {
-    const operators = props.operator;
+    const operators = props.operators;
 
     const list = operators.map((operator) =>
-        <ListOperator key={operator.toString()} value={operator} />
+        <ListOperator selectOperator={props.selectOperator} key={operator.toString()} value={operator} />
     )
 
     return (

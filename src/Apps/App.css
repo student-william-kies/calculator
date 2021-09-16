@@ -65,6 +65,19 @@ h1{
     flex-direction: column;
 }
 
-#button-equal{
+#number-0{
     width: 11.4vw;
+}
+
+.show-calcul{
+    background-color: #232323;
+    border-right: 3px solid #1a1a1a;
+    border-bottom: 3px solid #1a1a1a;
+    color: #ffffff;
+    width: 20%;
+    margin-left: 2%;
+}
+
+.show-calcul h1{
+    text-align: center;
 }
