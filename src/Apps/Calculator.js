@@ -54,12 +54,6 @@ function Calculator()
                     <div className='last-button'><MagnificientEqualButton click={Click} operator={operator} equal={equal} lastNumber={lastNumber} /></div>
                 </div>
             </div>
-            <div className='show-calcul'>
-                <h1>Vos Calculs :</h1>
-                <p>
-                    {result}
-                </p>
-            </div>
         </div>
     );
 }
