@@ -17,6 +17,8 @@ function Calculator()
     const [operator, setOperator] = useState('');
     const listOperator = ['+', '-', '*', '/'];
 
+    const [bool, setBool] = useState(false);
+
     function Click(e)
     {
         const eventNumber = result + e.target.value;
@@ -28,13 +30,18 @@ function Calculator()
         {
             let newResult = eval(result);
             setResult(newResult);
+            if (newResult > '9000')
+            {
+                setBool(true);
+
+            }
         }
     }
 
     return(
         <div className='center-calc'>
             <div className='calculator'>
-                <div className='top-screen' id='top-screen'><BeautifulScreen result={result} /></div>
+                <div className='top-screen' id='top-screen'><BeautifulScreen bool={bool} result={result} /></div>
                 <div className='container'>
                     <div className='numbers'>
                         <div className='list-number'><AmazingNumberButton click={Click} numbersTop={numbersTop} numbersMiddle={numbersMiddle} numbersBottom={numbersBottom} /></div>
